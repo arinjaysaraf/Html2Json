@@ -8,7 +8,7 @@ app = FastAPI()
 class html2json(BaseModel):
     html: str
 
-@app.get("/")
+@app.post("/")
 def sendJson(data: html2json):
     soup = BeautifulSoup(data.html, 'html.parser')
     text = soup.find_all('p')
