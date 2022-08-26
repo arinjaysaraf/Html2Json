@@ -59,7 +59,7 @@ def rssFeed(feeds:feedsClass):
         'dec':'11'
     }
     dateTime[1] = dateTime[1].replace(dateTime[1],monthDict[dateTime[1]])
-    dateString = dateTime[1]+'/'+dateTime[0]+'/'+dateTime[2] +" "+ dateTime[3] 
+    dateString = dateTime[1]+'/'+dateTime[0]+'/'+dateTime[2] +" "+ dateTime[3][:-2]
     
     # dic = {"title":title , 'img' : data['2'], 'description':data['1']   }
     # jsonData = json.loads(json.dumps(data))
