@@ -1,4 +1,3 @@
-
 import requests
 from bs4 import BeautifulSoup
 import json 
@@ -35,9 +34,9 @@ def rssFeed(feeds:feedsClass):
                 data[str(k)] = j['src']
         k+=1
     print(data)
-    
+    dic = {"title":title , 'img' : data['2'], 'description':data['1']   }
     # jsonData = json.loads(json.dumps(data))
-    return {"jsonData":data}
+    return {"jsonData":dic}
 
 
 
