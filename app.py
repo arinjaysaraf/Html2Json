@@ -45,21 +45,21 @@ def rssFeed(feeds:feedsClass):
     print(data)
     # monthDict={1:'jan', 2:'feb', 3:'mar', 4:'apr', 5:'may', 6:'jun', 7:'jul', 8:'aug', 9:'sep', 10:'oct', 11:'nov', 12:'dec'}
     monthDict = {
-        'jan':'0',
-        'feb':'1',
-        'mar':'2',
-        'apr':'3',
-        'may':'4',
-        'jun':'5',
-        'jul':'6',
-        'aug':'7',
-        'sep':'8',
-        'oct':'9',
+        'jan':'00',
+        'feb':'01',
+        'mar':'02',
+        'apr':'03',
+        'may':'04',
+        'jun':'05',
+        'jul':'06',
+        'aug':'07',
+        'sep':'08',
+        'oct':'09',
         'nov':'10',
         'dec':'11'
     }
     dateTime[1] = dateTime[1].replace(dateTime[1],monthDict[dateTime[1]])
-    dateString = dateTime[0]+'-'+dateTime[1]+'-'+dateTime[2] +" "+ dateTime[3] 
+    dateString = dateTime[1]+'/'+dateTime[0]+'/'+dateTime[2] +" "+ dateTime[3] 
     
     # dic = {"title":title , 'img' : data['2'], 'description':data['1']   }
     # jsonData = json.loads(json.dumps(data))
