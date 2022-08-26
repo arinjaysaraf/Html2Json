@@ -1,534 +1,523 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1"><title>
-
-</title><link href="css/style.css" rel="stylesheet" type="text/css" /><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="alternate stylesheet" href="css/change.css" media="screen" title="change" /><link rel="alternate stylesheet" href="css/green.css" media="screen" title="green" /><link rel="alternate stylesheet" href="css/yellow.css" media="screen" title="yellow" /><link rel="stylesheet" type="text/css" href="css/prtint.css" media="print" />
-    <script src="js/jquery.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(window).load(function () {
-            // executes when complete page is fully loaded, including all frames, objects and images
-            var varPermId = $('[id*=hydpermid').val();
-            $.ajax({
-                type: "POST",
-                url: "AjaxMethod.aspx/UpdateHitCount",
-                async: false,
-
-                data: JSON.stringify({ 'PermId': varPermId }),
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                success: function (response) {
-
-                    // var trecord = JSON.parse(response.d).length;
-
-
-                },
-                failure: function (request, error) {
-
-                    alert(" Can't do because: " + error);
-                }
-            });
-
-        });
-
-    </script>
-    <script type="text/javascript">
-        $(function () {
-            $("[id*=printPDF]").click(function () {
-                $("[id*=hfGridHtml]").val($("#PdfDiv").html());
-            });
-        });
-    </script>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112591026-1"></script>
-    <script>
-
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() { dataLayer.push(arguments); }
-
-        gtag('js', new Date());
-
-
-
-        gtag('config', 'UA-112591026-1');
-
-    </script>
-
-<meta property="og:title" content="Shri Anurag Thakur urges youth to hoist Tiranga at  their homes from 13-15th August" /><meta property="og:url" content="www.pib.gov.in/Pressreleaseshare.aspx?PRID=1850311" /><meta property="og:description" content="Union Minister for Information and Broadcasting, and Youth Affairs and Sports Shri Anurag Singh Thak" /><meta property="og:image" content="https://164.100.158.168/images/indian-emblem.png" /></head>
-<body>
-    <form method="post" action="./PressReleasePage.aspx?PRID=1850311" id="form1">
-<input type="hidden" name="sc_HiddenField" id="sc_HiddenField" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
-
-
-<script src="/ScriptResource.axd?d=jE99Xk3jc3ItVB6im_n0O_88O4frdmlBMVTZR80B3z-9uNF_xyxvsmWBTXG-GNsoH4zUBz8uZ1q8GJJPuKuAAz0p_LQQk8Me210D5yKnAr1mhQf_zbaJ52DIAFbfWtjKDiJq3A2&amp;t=ffffffffecf8d3f2" type="text/javascript"></script>
-<script type="text/javascript">
-//<![CDATA[
-if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
-//]]>
-</script>
-
-<script src="/PressReleasePage.aspx?_TSM_HiddenField_=sc_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d3.5.7.123%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3a5a4df314-b4a2-4da2-a207-9284f1b1e96c%3ade1feab2%3af2c8e708%3a720a52bf%3af9cec9bc%3a589eaa30%3aa67c2700%3aab09e3fe%3a87104b7c%3a8613aea7%3a3202a5a2%3abe6fb298" type="text/javascript"></script>
-<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="59B53027" />
-<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
-<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="iBr8HEyvzPfvtG9Zj6js+aSOlSBzknZ/In8rYOwLBvvjQ3ZQ1e3UicCIrqDjgrfCmbiF4DJcF12XP9KtY/ks+xLd/DS5zkghG5+N8ps4Ft7Rqu3dP+gYOuZ596oLDCi9LC7b6sN71lPyhvCRE5N52he4w7wAx+XCt9YAKtOYsNtm5cLAvcOgovJWTSuqS1VbcJ52iYD5E/2mWhbWXuvCtu2vLuEq3Dx6nChKtsUthLVi3WQ8N42yTCrbavBgY0haA8E/BxHMO6xJNE6rgJJ4zFcwPn4Yprkb7F5s8soxMqyzku798pnBJ3pCAHOK+FaT8t7q2Q==" />
-        
-        <input type="hidden" name="hfGridHtml" id="hfGridHtml" />
-        <div class="container" style='margin-bottom: 50px;'>
-            <input type="image" name="printPDF" id="printPDF" title="Download in PDF" src="images/downloadicon1.png" alt="pdf" />
-            <div class="pull-right" style="display: flex">
-                <div id="voll"></div>
-                <div id="vollDT"></div>
-                
-                
-<div class="print-icons">
-<input type="image" name="Print1$print" id="Print1_print" src="images/printer_icon.png" />
-</div>
-            </div>
-            <input type="hidden" name="hydpermid" id="hydpermid" value="1850311" />
-            <div class="innner-page-main-about-us-content-right-part">
-                <div class="MinistryNameSubhead text-center">
-                    Ministry of Youth Affairs and Sports
-                </div>
-                
-                <div id="lg_g"><div class='log_oo'>  <img src='https://static.pib.gov.in/WriteReadData/specificdocs/photo/2021/aug/ph202183101.png' alt='azadi ka amrit mahotsav' /> </div></div>
-                <div class="text-center">
-                    <h2>
-                        Shri Anurag Thakur urges youth to hoist Tiranga at  their homes from 13-15th August<br />
-                        
-                        <span id="ltrSubtitle"><br/>Minister addresses a youth conference in Shimla<br/></span>
-                </div>
-                </h2>
-            <div class="ReleaseDateSubHeaddateTime text-center pt20">
-                Posted On:
-                09 AUG 2022 7:42PM by PIB Delhi
-            </div>
-                <div class='pt20'>
-                </div>
-                <input type="hidden" name="hydphotoUrl" id="hydphotoUrl" />
-                
-                <p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#222222">Union Minister for Information and Broadcasting, and Youth Affairs and Sports Shri Anurag Singh Thakur&nbsp; urged the youth to unfurl Tiranga at their homes from 13<sup>th</sup> to 15<sup>th</sup> August 2022&nbsp; as a part of the celebration of &ldquo;Har Ghar Tiranga&rdquo; campaign in the country. He said that today being the &ldquo;August Kranti&rdquo; Diwas&nbsp; our youth should take oath to hoist Tiranga at the top of the world by contributing with their dedication and hard work in their respective field.&nbsp;&nbsp; Shri Anurag said that our national flag is not mere a piece of cloth but the power of Tricolour unites 130 crore Indians. He further said that our youth should take pledge that they will keep the country united and will take India forward and make India stronger. He was addressing during a Youth conference&nbsp; held with the members of Nehru Yuva Kendra, NSS volunteers and different Yuva Mandals in Shimla today. The programme was organized by the Nehru Yuva Kendra, Shimla (HP).</span></span></span></span></p>
-
-<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img src="https://static.pib.gov.in/WriteReadData/userfiles/image/image001ARGP.jpg" style="height:292px; width:624px" /></span></span></p>
-
-<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#222222">While interacting with the youth, he called for inculcating the feeling of patriotism and national integration among the younger generation through Bharat Darshan programme. He said that every youth should visit and see the other places and&nbsp; parts of their State and the country which will infuse a sense of belonging and patriotism among them and help them becoming responsible citizens. He also mentioned about the role of the &ldquo;EK Bharat Shreshth Bharat&rdquo; (EBSB) programme in breaking the barriers of language, culture and different cuisines of different states thus bringing youths of different states closer to each other. The Minister said that it will work towards maintaining&nbsp; the unity and integrity of the nation and thus will enhance the glory of India.</span></span></span></span></p>
-
-<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img src="https://static.pib.gov.in/WriteReadData/userfiles/image/image002O40U.jpg" style="height:367px; width:624px" /></span></span></p>
-
-<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#222222">In a candid discussion with the participants, Shri Anurag Thakur tried to know the views of the youth on the different issues and problems in the country.&nbsp; He discussed the issues of women empowerment, Ek Bharat Shreshth Bharat, skill development, role of sports, Fit India movement and carrier counseling threadbare with the youths of Nehru Yuva Kendra, NSS volunteers and different Yuva Mandals. He expressed hope that such meetings will continue in future also so that youth of this country can come to know about the Government schemes and can approach the Government. </span></span></span></span></p>
-
-<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#222222">The Minister also mentioned about the achievements of the&nbsp; Central&nbsp; Government schemes like the Har Ghar Jal Yojna,&nbsp; sanitation drive Ujala, Ujwala Yojna,&nbsp; and Digital India etc.&nbsp; He said that to promote the Fit India movement he has established 250 gyms in his parliamentary constituency. </span></span></span></span></p>
-
-<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#222222">While replying to the questions of the media persons, he said that under the leadership of Prime Minister, Shri Narendera Modi India&nbsp; has done remarkable progress in every sphere. He said that in sports our achievements have increased manifold as results of the recent Commonwealth Games show that India got 61 medals and scored 4<sup>th</sup> position in the tournament. </span></span></span></span></p>
-
-<p>&nbsp;</p>
-
-<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#222222">******</span></span></span></span></p>
-
-<p><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#222222">NB/OA</span></span></span></span></p>
-
-                <br />
-                <br />
-                <span id="ReleaseId">(Release ID: 1850311)</span>
-                <span id="lblViews">Visitor Counter : 685</span>
-                <br />
-                <span id="lblRefPhoto"></span><br />
-                <br />
-                <div class="BackgroundRelease">
-                    
-                </div>
-                <div>
-                    
-                </div>
-                <div class="ReleaseLang">Read this release in: 
-                
-                        
-                        <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=1850338' target="_blank">
-                            Marathi </a>
-                    
-                        ,
-                    
-                        
-                        <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=1850344' target="_blank">
-                            Odia </a>
-                    
-                        ,
-                    
-                        
-                        <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=1850366' target="_blank">
-                            Urdu </a>
-                    
-                        ,
-                    
-                        
-                        <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=1850371' target="_blank">
-                            Hindi </a>
-                    
-                </div>
-                <br />
-                <div class="RelTag">
-                    <ul>
-                        
-                    </ul>
-                </div>
-                <div class="clear">
-                </div>
-                <div class="RelLink">
-                    <ul>
-                        
-                        
-                    </ul>
-                </div>
-            </div>
-            <div id="update12">
-	
-                    
-                    <input type="hidden" name="Hidden" id="Hidden" />
-                    <div id="P_CategoryManagement" class="ModalWindow" style="display: none">
-		
-                        <div>
-                            <input type="image" name="btnClose" id="btnClose" src="images/close_flat_icon.png" />
-                        </div>
-                        <div id="description">
-                        </div>
-                        <div class="text-center">
-                            <h2>
-                                
-                                <br>
-                                
-                            </h2>
-                        </div>
-                        <br />
-                        <div class="clear">
-                        </div>
-                        
-                    
-	</div>
-                
-</div>
-        </div>
-        
-        <div id="PdfDiv" style="display: none;">
-            <table width="100%">
-                <tr>
-                    <td style="font-weight: 200; text-align: center">
-                        Ministry of Youth Affairs and Sports
-                        <div style="height: 30px; width: 100%;">
-                        </div>
-                        <div style="font-weight: 200; text-align: center; font-size: 30px;">
-                            Shri Anurag Thakur urges youth to hoist Tiranga at  their homes from 13-15th August
-                        </div>
-                        <div style="height: 30px; width: 100%;">
-                        </div>
-                        <div style="font-weight: 200; text-align: center; font-size: 30px;">
-                            <div style='height:30px;width:100%;'></div>Minister addresses a youth conference in Shimla<div style='height:30px;width:100%;'></div>
-                        </div>
-                        <div style="height: 30px; width: 100%;">
-                        </div>
-                        <div style="text-align: center; font-size: 14px;">
-                            Posted On:
-                        09 AUG 2022 7:42PM by PIB Delhi
-                        </div>
-                        <div style="height: 30px; width: 100%;">
-                        </div>
-                        <div style="font-weight: 200; text-align: left; font-size: 16px;">
-                            <p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#222222">Union Minister for Information and Broadcasting, and Youth Affairs and Sports Shri Anurag Singh Thakur&nbsp; urged the youth to unfurl Tiranga at their homes from 13<sup>th</sup> to 15<sup>th</sup> August 2022&nbsp; as a part of the celebration of &ldquo;Har Ghar Tiranga&rdquo; campaign in the country. He said that today being the &ldquo;August Kranti&rdquo; Diwas&nbsp; our youth should take oath to hoist Tiranga at the top of the world by contributing with their dedication and hard work in their respective field.&nbsp;&nbsp; Shri Anurag said that our national flag is not mere a piece of cloth but the power of Tricolour unites 130 crore Indians. He further said that our youth should take pledge that they will keep the country united and will take India forward and make India stronger. He was addressing during a Youth conference&nbsp; held with the members of Nehru Yuva Kendra, NSS volunteers and different Yuva Mandals in Shimla today. The programme was organized by the Nehru Yuva Kendra, Shimla (HP).</span></span></span></span></p>
-
-<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img src="https://static.pib.gov.in/WriteReadData/userfiles/image/image001ARGP.jpg" style="height:292px; width:624px" /></span></span></p>
-
-<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#222222">While interacting with the youth, he called for inculcating the feeling of patriotism and national integration among the younger generation through Bharat Darshan programme. He said that every youth should visit and see the other places and&nbsp; parts of their State and the country which will infuse a sense of belonging and patriotism among them and help them becoming responsible citizens. He also mentioned about the role of the &ldquo;EK Bharat Shreshth Bharat&rdquo; (EBSB) programme in breaking the barriers of language, culture and different cuisines of different states thus bringing youths of different states closer to each other. The Minister said that it will work towards maintaining&nbsp; the unity and integrity of the nation and thus will enhance the glory of India.</span></span></span></span></p>
-
-<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img src="https://static.pib.gov.in/WriteReadData/userfiles/image/image002O40U.jpg" style="height:367px; width:624px" /></span></span></p>
-
-<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#222222">In a candid discussion with the participants, Shri Anurag Thakur tried to know the views of the youth on the different issues and problems in the country.&nbsp; He discussed the issues of women empowerment, Ek Bharat Shreshth Bharat, skill development, role of sports, Fit India movement and carrier counseling threadbare with the youths of Nehru Yuva Kendra, NSS volunteers and different Yuva Mandals. He expressed hope that such meetings will continue in future also so that youth of this country can come to know about the Government schemes and can approach the Government. </span></span></span></span></p>
-
-<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#222222">The Minister also mentioned about the achievements of the&nbsp; Central&nbsp; Government schemes like the Har Ghar Jal Yojna,&nbsp; sanitation drive Ujala, Ujwala Yojna,&nbsp; and Digital India etc.&nbsp; He said that to promote the Fit India movement he has established 250 gyms in his parliamentary constituency. </span></span></span></span></p>
-
-<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#222222">While replying to the questions of the media persons, he said that under the leadership of Prime Minister, Shri Narendera Modi India&nbsp; has done remarkable progress in every sphere. He said that in sports our achievements have increased manifold as results of the recent Commonwealth Games show that India got 61 medals and scored 4<sup>th</sup> position in the tournament. </span></span></span></span></p>
-
-<p>&nbsp;</p>
-
-<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#222222">******</span></span></span></span></p>
-
-<p><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#222222">NB/OA</span></span></span></span></p>
-
-                        </div>
-                        <div style="height: 30px; width: 100%;">
-                        </div>
-                        <div style="height: 30px; width: 100%;">
-                        </div>
-                        <div style="font-weight: 100; text-align: left; font-size: 16px;">
-                            (Release ID: 1850311)
-                        </div>
-                        <div style="height: 30px; width: 100%;">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="font-weight: 200; text-align: center; font-size: 24px;"></td>
-                </tr>
-            </table>
-        </div>
-        <div class="clearfix">
-        </div>
-
-        
-
-        <div class="section1">
-            <div id="frst_t">
-                <div id="arr_rm"><div class='sticky-social_mb'><ul class='social_mb'><a href='http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=1850311' target='_blank'><li class='fb_b'   ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/facebook.jpg' alt='Share on facebook'  width='40' /></li></a><a href='https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=1850311&text=Shri Anurag Thakur urges youth to hoist Tiranga at  their homes from 13-15th August' target='_blank'><li class='twitter_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/twitter1.png' alt='Share on twitter' width='40' /> </li></a><a href='https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=1850311' target='_blank'><li class='whatsapp_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/whatsapp1.png' alt='Share on whatsapp' width='40' /></li></a><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=Shri Anurag Thakur urges youth to hoist Tiranga at  their homes from 13-15th August&body=https://pib.gov.in/PressReleasePage.aspx?PRID=1850311&ui=2&tf=1&pli=1' title='Share by Email' target='_blank'><li class='fa-envelope_r' ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/email1.png' alt='Share on email'  width='40' /></li></a><a href='https://www.linkedin.com/shareArticle?mini=true&url=https://pib.gov.in/PressReleasePage.aspx?PRID=1850311&title=Shri Anurag Thakur urges youth to hoist Tiranga at  their homes from 13-15th August&summary=My%20favorite%20developer%20program&source=LinkedIn' target='_blank'><li class='fa-linkedin_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/linkedin.png' alt='Share on linkedin' width='40' /></li></a></ul></div></div>
-            </div>
-            <div id="second_t">
-                <div id="sndr_rm"><div class='sticky-social'><ul class='social'><a href='http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=1850311' target='_blank'><li class='fb_b'   ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/facebook.jpg' alt='Share on facebook'  width='35' /></li></a><a href='https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=1850311&text=Shri Anurag Thakur urges youth to hoist Tiranga at  their homes from 13-15th August' target='_blank'><li class='twitter_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/twitter1.png' alt='Share on twitter' width='35' /> </li></a><a href='https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=1850311' target='_blank'><li class='whatsapp_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/whatsapp1.png' alt='Share on whatsapp' width='35' /></li></a><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=Shri Anurag Thakur urges youth to hoist Tiranga at  their homes from 13-15th August&body=https://pib.gov.in/PressReleasePage.aspx?PRID=1850311&ui=2&tf=1&pli=1' title='Share by Email' target='_blank'><li class='fa-envelope_r' ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/email1.png' alt='Share on email'  width='35' /></li></a><a href='https://www.linkedin.com/shareArticle?mini=true&url=https://pib.gov.in/PressReleasePage.aspx?PRID=1850311&title=Shri Anurag Thakur urges youth to hoist Tiranga at  their homes from 13-15th August&summary=My%20favorite%20developer%20program&source=LinkedIn' target='_blank'><li class='fa-linkedin_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/linkedin.png' alt='Share on linkedin' width='35' /></li></a></ul></div></div>
-            </div>
-        </div>
-        <input type="hidden" name="ltrTitlee" id="ltrTitlee" value="Shri Anurag Thakur urges youth to hoist Tiranga at  their homes from 13-15th August" />
-        <input type="hidden" name="ltrSubtitlee" id="ltrSubtitlee" value="&lt;br/>Minister addresses a youth conference in Shimla&lt;br/>" />
-        <input type="hidden" name="ltrDescriptionn" id="ltrDescriptionn" value="&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:white&quot;>&lt;span style=&quot;color:#222222&quot;>Union Minister for Information and Broadcasting, and Youth Affairs and Sports Shri Anurag Singh Thakur&amp;nbsp; urged the youth to unfurl Tiranga at their homes from 13&lt;sup>th&lt;/sup> to 15&lt;sup>th&lt;/sup> August 2022&amp;nbsp; as a part of the celebration of &amp;ldquo;Har Ghar Tiranga&amp;rdquo; campaign in the country. He said that today being the &amp;ldquo;August Kranti&amp;rdquo; Diwas&amp;nbsp; our youth should take oath to hoist Tiranga at the top of the world by contributing with their dedication and hard work in their respective field.&amp;nbsp;&amp;nbsp; Shri Anurag said that our national flag is not mere a piece of cloth but the power of Tricolour unites 130 crore Indians. He further said that our youth should take pledge that they will keep the country united and will take India forward and make India stronger. He was addressing during a Youth conference&amp;nbsp; held with the members of Nehru Yuva Kendra, NSS volunteers and different Yuva Mandals in Shimla today. The programme was organized by the Nehru Yuva Kendra, Shimla (HP).&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/p>
-
-&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;img src=&quot;https://static.pib.gov.in/WriteReadData/userfiles/image/image001ARGP.jpg&quot; style=&quot;height:292px; width:624px&quot; />&lt;/span>&lt;/span>&lt;/p>
-
-&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:white&quot;>&lt;span style=&quot;color:#222222&quot;>While interacting with the youth, he called for inculcating the feeling of patriotism and national integration among the younger generation through Bharat Darshan programme. He said that every youth should visit and see the other places and&amp;nbsp; parts of their State and the country which will infuse a sense of belonging and patriotism among them and help them becoming responsible citizens. He also mentioned about the role of the &amp;ldquo;EK Bharat Shreshth Bharat&amp;rdquo; (EBSB) programme in breaking the barriers of language, culture and different cuisines of different states thus bringing youths of different states closer to each other. The Minister said that it will work towards maintaining&amp;nbsp; the unity and integrity of the nation and thus will enhance the glory of India.&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/p>
-
-&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;img src=&quot;https://static.pib.gov.in/WriteReadData/userfiles/image/image002O40U.jpg&quot; style=&quot;height:367px; width:624px&quot; />&lt;/span>&lt;/span>&lt;/p>
-
-&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:white&quot;>&lt;span style=&quot;color:#222222&quot;>In a candid discussion with the participants, Shri Anurag Thakur tried to know the views of the youth on the different issues and problems in the country.&amp;nbsp; He discussed the issues of women empowerment, Ek Bharat Shreshth Bharat, skill development, role of sports, Fit India movement and carrier counseling threadbare with the youths of Nehru Yuva Kendra, NSS volunteers and different Yuva Mandals. He expressed hope that such meetings will continue in future also so that youth of this country can come to know about the Government schemes and can approach the Government. &lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/p>
-
-&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:white&quot;>&lt;span style=&quot;color:#222222&quot;>The Minister also mentioned about the achievements of the&amp;nbsp; Central&amp;nbsp; Government schemes like the Har Ghar Jal Yojna,&amp;nbsp; sanitation drive Ujala, Ujwala Yojna,&amp;nbsp; and Digital India etc.&amp;nbsp; He said that to promote the Fit India movement he has established 250 gyms in his parliamentary constituency. &lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/p>
-
-&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:white&quot;>&lt;span style=&quot;color:#222222&quot;>While replying to the questions of the media persons, he said that under the leadership of Prime Minister, Shri Narendera Modi India&amp;nbsp; has done remarkable progress in every sphere. He said that in sports our achievements have increased manifold as results of the recent Commonwealth Games show that India got 61 medals and scored 4&lt;sup>th&lt;/sup> position in the tournament. &lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/p>
-
-&lt;p>&amp;nbsp;&lt;/p>
-
-&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:white&quot;>&lt;span style=&quot;color:#222222&quot;>******&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/p>
-
-&lt;p>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:white&quot;>&lt;span style=&quot;color:#222222&quot;>NB/OA&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/p>
-" />
-        <script type="text/javascript">
-            var mPlayer = document.getElementById("background_music");
-            var mPlayAction = document.getElementById("playbutton");
-
-            var isPlaying = false;
-
-            function playAudio() {
-                mPlayer.play();
-                isPlaying = true;
-                document.getElementById('stopA').style.display = "block";
-                document.getElementById('playA').style.display = "none";
-            }
-
-            function pauseAudio() {
-                mPlayer.pause();
-                isPlaying = false;
-                document.getElementById('playA').style.display = "block";
-                document.getElementById('stopA').style.display = "none";
-            }
-            //function HandleAudio() {
-            //    if (isPlaying == true) {
-            //        //Playing already Pause it
-            //        pauseAudio();
-            //    } else {
-            //        //Play the music
-            //        playAudio();
-            //    }
-            //}
-        </script>
-        <script type="text/javascript">
-            var synth = window.speechSynthesis;
-
-            
-            function stripHtml(html) {
-                let tmp = document.createElement("DIV");
-                tmp.innerHTML = html;
-                return tmp.textContent || tmp.innerText || "";
-            }
-        </script>
-        <script type="text/javascript">
-            $(document).ready(function () {
-                var width = $(window).width();
-                if (width < 768) {
-
-                    // Extra Small Device
-                    document.getElementById('frst_t').style.display = "block";
-                    document.getElementById('second_t').style.display = "none";
-
-                } else if (width < 991) {
-                    document.getElementById('frst_t').style.display = "block";
-                    document.getElementById('second_t').style.display = "none";
-                    // Small Device
-
-                } else if (width < 1199) {
-                    document.getElementById('frst_t').style.display = "none";
-                    document.getElementById('second_t').style.display = "block";
-                    // Medium Device
-
-                } else {
-                    document.getElementById('frst_t').style.display = "none";
-                    document.getElementById('second_t').style.display = "block";
-                    // Large Device
-
-                }
-            });
-        </script>
-        <script type="text/javascript">
-            $(document).ready(function () {
-                var width = $(window).width();
-                if (width < 768) {
-
-                    // Extra Small Device
-                    document.getElementById('frst_t').style.display = "block";
-                    document.getElementById('second_t').style.display = "none";
-
-                } else if (width < 991) {
-                    document.getElementById('frst_t').style.display = "block";
-                    document.getElementById('second_t').style.display = "none";
-                    // Small Device
-
-                } else if (width < 1199) {
-                    document.getElementById('frst_t').style.display = "none";
-                    document.getElementById('second_t').style.display = "block";
-                    // Medium Device
-
-                } else {
-                    document.getElementById('frst_t').style.display = "none";
-                    document.getElementById('second_t').style.display = "block";
-                    // Large Device
-
-                }
-            });
-        </script>
-        
-        <style type="text/css">
-            .f_vl {
-                padding-right: 30px;
-                font-size: 17px;
-                cursor: pointer;
-            }
-
-            .log_oo {
-                width: 20%;
-                display: block;
-                position: inherit;
-            }
-
-                .log_oo img {
-                    width: 150px;
-                    /*width: 100%;
-                    height: auto;*/
-                }
-
-            .sticky-social_mb {
-                position: fixed;
-                bottom: 0px;
-                padding: 0px;
-                margin: 0px;
-                width: 100%;
-            }
-
-            .social_mb {
-                list-style: none;
-                display: flex;
-                width: 100%;
-                margin-bottom: -8px;
-            }
-
-                .social_mb a {
-                    padding: 8px 0px;
-                    font-size: 30px;
-                    transition: all 0.8s ease-in-out;
-                    width: 20% !important;
-                    text-align: center;
-                }
-        </style>
-        <style type="text/css">
-            .section1 {
-                position: relative;
-                padding: 10px 0px;
-                width: 100%;
-            }
-
-
-
-            .sticky-social {
-                position: fixed;
-                top: 20px;
-                left: 0px;
-                padding: 0px;
-                margin: 0px;
-            }
-
-            .social {
-                list-style: none;
-            }
-
-                .social a li {
-                    padding: 8px 12px;
-                    font-size: 25px;
-                    transition: all 0.8s ease-in-out;
-                }
-
-                    .social a li:hover {
-                        margin-right: -30px;
-                        box-shadow: 2px 5px 10px grey;
-                    }
-
-                        .social a li:hover .fa {
-                            margin-left: 20px;
-                        }
-
-            .fb_b {
-                /* background-color: rgb(59, 89, 152);*/
-                background-color: rgba(65,103,178,255);
-            }
-
-            .twitter_r {
-                /* background-color: rgb(29, 161, 242);*/
-                background-color: rgba(80,171,241,255);
-            }
-
-            .whatsapp_r {
-                /* background-color: rgb(77, 194, 71);*/
-                background-color: rgba(13,191,67,255);
-            }
-
-            .fa-envelope_r {
-                /* background-color: rgb(219, 68, 55);*/
-                background-color: #e2123d;
-            }
-
-            .fa-linkedin_r {
-                background-color: rgb(0, 119, 181);
-            }
-        </style>
-        <style type="text/css">
-            @media only screen and (max-device-width: 767px) {
-                p span img {
-                    width: 90% !important;
-                    height: auto !important;
-                }
-
-                p img {
-                    width: 90% !important;
-                    height: auto !important;
-                }
-
-                h2 {
-                    font-size: 18px !important;
-                    font-weight: 600 !important;
-                }
-            }
-        </style>
-    
-
-<script type="text/javascript">
-//<![CDATA[
-(function() {var fn = function() {$get("sc_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();Sys.Application.add_init(function() {
-    $create(Sys.Extended.UI.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","PopupControlID":"P_CategoryManagement","dynamicServicePath":"/PressReleasePage.aspx","id":"mpe"}, null, null, $get("Hidden"));
-});
-//]]>
-</script>
-<input type="hidden" name="__ncforminfo" value="ldDv-g8OHRv-FM2Qd_UXrUo04fBSXSh6riKGEfSiwUwdXpWpHdlQWHQpGgd2zV0uNlvR7ysG_9J-VP2eONHmh3YhmCa91JjL"/></form>
-</body>
-</html>
-
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+
+</title><link href="css/style.css" rel="stylesheet" type="text/css" /><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="alternate stylesheet" href="css/change.css" media="screen" title="change" /><link rel="alternate stylesheet" href="css/green.css" media="screen" title="green" /><link rel="alternate stylesheet" href="css/yellow.css" media="screen" title="yellow" /><link rel="stylesheet" type="text/css" href="css/prtint.css" media="print" />
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            // executes when complete page is fully loaded, including all frames, objects and images
+            var varPermId = $('[id*=hydpermid').val();
+            $.ajax({
+                type: "POST",
+                url: "AjaxMethod.aspx/UpdateHitCount",
+                async: false,
+
+                data: JSON.stringify({ 'PermId': varPermId }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+
+                    // var trecord = JSON.parse(response.d).length;
+
+
+                },
+                failure: function (request, error) {
+
+                    alert(" Can't do because: " + error);
+                }
+            });
+
+        });
+
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $("[id*=printPDF]").click(function () {
+                $("[id*=hfGridHtml]").val($("#PdfDiv").html());
+            });
+        });
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112591026-1"></script>
+    <script>
+
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() { dataLayer.push(arguments); }
+
+        gtag('js', new Date());
+
+
+
+        gtag('config', 'UA-112591026-1');
+
+    </script>
+
+<meta property="og:title" content=" Envoys of four nations present credentials to President of India" /><meta property="og:url" content="pib.gov.in/Pressreleaseshare.aspx?PRID=1854598" /><meta property="og:description" content="The President of India, Smt Droupadi Murmu accepted credentials from the Ambassadors of Ecuador, Som" /><meta property="og:image" content="https://164.100.158.168/images/indian-emblem.png" /></head>
+<body>
+    <form method="post" action="./PressReleaseIframePage.aspx?PRID=1854598" id="form1">
+<input type="hidden" name="sc_HiddenField" id="sc_HiddenField" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+
+<script src="/ScriptResource.axd?d=jE99Xk3jc3ItVB6im_n0O_88O4frdmlBMVTZR80B3z-9uNF_xyxvsmWBTXG-GNsoH4zUBz8uZ1q8GJJPuKuAAz0p_LQQk8Me210D5yKnAr1mhQf_zbaJ52DIAFbfWtjKDiJq3A2&amp;t=ffffffffecf8d3f2" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/PressReleaseIframePage.aspx?_TSM_HiddenField_=sc_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d3.5.7.123%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3a5a4df314-b4a2-4da2-a207-9284f1b1e96c%3ade1feab2%3af2c8e708%3a720a52bf%3af9cec9bc%3a589eaa30%3aa67c2700%3aab09e3fe%3a87104b7c%3a8613aea7%3a3202a5a2%3abe6fb298" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="8166A38A" />
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="IQ4WF8FRMmomDIWwIap0fc6IEXp/NBnN9eFEMMoLJ0CyTQTNiYjjyUW7JQrpJv5duCvXkMgzRO3tF9xt8lPzC9nWi38KtmWNV7eqY+qno2PO5FUt5Wepkv9IFSwfggEprDfPzeJYYbleCvTcAmuaE8xs5nInRLQYLNnrBhD0OhtjCyl0JnylqGuhSuX3FragRlUsd65s7q5EK7taAnV2eQBZqH6c36T8vozdPEh7JnUhP8PqGnv9gxsReMEfYO8rGERBG3KQgjp1ENbw+apUw4Rngt1q5X4CmO0gD927t8Qcpdiao2J6hAsNc7+fVFxO65mqZQ==" />
+        
+        <input type="hidden" name="hfGridHtml" id="hfGridHtml" />
+        <div class="container" style='margin-bottom: 50px;'>
+            <input type="image" name="printPDF" id="printPDF" title="Download in PDF" src="images/downloadicon1.png" alt="pdf" />
+            <div class="pull-right" style="display: flex">
+                <div id="voll"><a id='playAA' onclick='playA()' style='display:block;' title='Listen the Release'><i class='fa fa-volume-up f_vl'></i></a> <a id='stopAA' onclick='stopA()'  style='display:none;'  title='Cancel listening'><i class='fa fa-pause f_vl'></i></a></div>
+                <div id="vollDT"></div>
+                
+                
+<div class="print-icons">
+<input type="image" name="Print1$print" id="Print1_print" src="images/printer_icon.png" />
+</div>
+            </div>
+            <input type="hidden" name="hydpermid" id="hydpermid" value="1854598" />
+            <div class="innner-page-main-about-us-content-right-part">
+                <div class="MinistryNameSubhead text-center">
+                    President's Secretariat
+                </div>
+                
+                <div id="lg_g"><div class='log_oo'>  <img src='https://static.pib.gov.in/WriteReadData/specificdocs/photo/2021/aug/ph202183101.png' alt='azadi ka amrit mahotsav' /> </div></div>
+                <div class="text-center">
+                    <h2>
+                         Envoys of four nations present credentials to President of India<br />
+                        
+                        <span id="ltrSubtitle"></span>
+                </div>
+                </h2>
+            <div class="ReleaseDateSubHeaddateTime text-center pt20">
+                Posted On:
+                26 AUG 2022 12:21PM by PIB Delhi
+            </div>
+                <div class='pt20'>
+                </div>
+                <input type="hidden" name="hydphotoUrl" id="hydphotoUrl" />
+                
+                <p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#000000"><span style="color:black">The President of India, Smt Droupadi Murmu accepted credentials from the Ambassadors of Ecuador, Somalia, Germany and Suriname at a ceremony held at Rashtrapati Bhavan today (August 26, 2022). Those who presented their credentials were:</span></span></span></span></span><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#000000">&nbsp;</span></span></span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#000000">1.&nbsp;&nbsp;&nbsp;H.E. Mr Francisco Teodoro Maldonado Guevara, Ambassador of the Republic of Ecuador</span></span></span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#000000">2.&nbsp;&nbsp;&nbsp;H.E. Mr Ahmed Ali Dahir, Ambassador of the Federal Republic of Somalia</span></span></span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#000000">3.&nbsp;&nbsp;&nbsp;H.E. Dr Philipp Ackermann, Ambassador of the Federal Republic of Germany</span></span></span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#000000">4.&nbsp;&nbsp;&nbsp;H.E. Mr Arunkoemar Hardien, Ambassador of the Republic of Suriname</span></span></span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#000000">&nbsp;</span></span></span></span></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="color:#000000"><span style="background-color:#ffffff">*****</span></span></span></span></p>
+
+<p style="text-align:start"><strong><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="color:#000000"><span style="background-color:#ffffff">DS/BM</span></span></span></span></strong></p>
+
+                <br />
+                <br />
+                <span id="ReleaseId">(Release ID: 1854598)</span>
+                <span id="lblViews">Visitor Counter : 114</span>
+                <br />
+                <span id="lblRefPhoto"></span><br />
+                <br />
+                <div class="BackgroundRelease">
+                    
+                </div>
+                <div>
+                    
+                </div>
+                <div class="ReleaseLang">Read this release in: 
+                
+                        
+                        <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=1854606' target="_blank">
+                            Urdu </a>
+                    
+                </div>
+                <br />
+                <div class="RelTag">
+                    <ul>
+                        
+                    </ul>
+                </div>
+                <div class="clear">
+                </div>
+                <div class="RelLink">
+                    <ul>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+            <div id="update12">
+	
+                    
+                    <input type="hidden" name="Hidden" id="Hidden" />
+                    <div id="P_CategoryManagement" class="ModalWindow" style="display: none">
+		
+                        <div>
+                            <input type="image" name="btnClose" id="btnClose" src="images/close_flat_icon.png" />
+                        </div>
+                        <div id="description">
+                        </div>
+                        <div class="text-center">
+                            <h2>
+                                
+                                <br>
+                                
+                            </h2>
+                        </div>
+                        <br />
+                        <div class="clear">
+                        </div>
+                        
+                    
+	</div>
+                
+</div>
+        </div>
+        
+        <div id="PdfDiv" style="display: none;">
+            <table width="100%">
+                <tr>
+                    <td style="font-weight: 200; text-align: center">
+                        President's Secretariat
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                        <div style="font-weight: 200; text-align: center; font-size: 30px;">
+                             Envoys of four nations present credentials to President of India
+                        </div>
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                        <div style="font-weight: 200; text-align: center; font-size: 30px;">
+                            
+                        </div>
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                        <div style="text-align: center; font-size: 14px;">
+                            Posted On:
+                        26 AUG 2022 12:21PM by PIB Delhi
+                        </div>
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                        <div style="font-weight: 200; text-align: left; font-size: 16px;">
+                            <p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#000000"><span style="color:black">The President of India, Smt Droupadi Murmu accepted credentials from the Ambassadors of Ecuador, Somalia, Germany and Suriname at a ceremony held at Rashtrapati Bhavan today (August 26, 2022). Those who presented their credentials were:</span></span></span></span></span><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#000000">&nbsp;</span></span></span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#000000">1.&nbsp;&nbsp;&nbsp;H.E. Mr Francisco Teodoro Maldonado Guevara, Ambassador of the Republic of Ecuador</span></span></span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#000000">2.&nbsp;&nbsp;&nbsp;H.E. Mr Ahmed Ali Dahir, Ambassador of the Federal Republic of Somalia</span></span></span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#000000">3.&nbsp;&nbsp;&nbsp;H.E. Dr Philipp Ackermann, Ambassador of the Federal Republic of Germany</span></span></span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#000000">4.&nbsp;&nbsp;&nbsp;H.E. Mr Arunkoemar Hardien, Ambassador of the Republic of Suriname</span></span></span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:#000000">&nbsp;</span></span></span></span></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="color:#000000"><span style="background-color:#ffffff">*****</span></span></span></span></p>
+
+<p style="text-align:start"><strong><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="color:#000000"><span style="background-color:#ffffff">DS/BM</span></span></span></span></strong></p>
+
+                        </div>
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                        <div style="font-weight: 100; text-align: left; font-size: 16px;">
+                            (Release ID: 1854598)
+                        </div>
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: 200; text-align: center; font-size: 24px;"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="clearfix">
+        </div>
+
+        
+
+        <div class="section1">
+            <div id="frst_t">
+                <div id="arr_rm"><div class='sticky-social_mb'><ul class='social_mb'><a href='http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=1854598' target='_blank'><li class='fb_b'   ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/facebook.jpg' alt='Share on facebook'  width='40' /></li></a><a href='https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=1854598&text= Envoys of four nations present credentials to President of India' target='_blank'><li class='twitter_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/twitter1.png' alt='Share on twitter' width='40' /> </li></a><a href='https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=1854598' target='_blank'><li class='whatsapp_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/whatsapp1.png' alt='Share on whatsapp' width='40' /></li></a><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su= Envoys of four nations present credentials to President of India&body=https://pib.gov.in/PressReleasePage.aspx?PRID=1854598&ui=2&tf=1&pli=1' title='Share by Email' target='_blank'><li class='fa-envelope_r' ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/email1.png' alt='Share on email'  width='40' /></li></a><a href='https://www.linkedin.com/shareArticle?mini=true&url=https://pib.gov.in/PressReleasePage.aspx?PRID=1854598&title= Envoys of four nations present credentials to President of India&summary=My%20favorite%20developer%20program&source=LinkedIn' target='_blank'><li class='fa-linkedin_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/linkedin.png' alt='Share on linkedin' width='40' /></li></a></ul></div></div>
+            </div>
+            <div id="second_t">
+                <div id="sndr_rm"><div class='sticky-social'><ul class='social'><a href='http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=1854598' target='_blank'><li class='fb_b'   ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/facebook.jpg' alt='Share on facebook'  width='35' /></li></a><a href='https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=1854598&text= Envoys of four nations present credentials to President of India' target='_blank'><li class='twitter_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/twitter1.png' alt='Share on twitter' width='35' /> </li></a><a href='https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=1854598' target='_blank'><li class='whatsapp_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/whatsapp1.png' alt='Share on whatsapp' width='35' /></li></a><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su= Envoys of four nations present credentials to President of India&body=https://pib.gov.in/PressReleasePage.aspx?PRID=1854598&ui=2&tf=1&pli=1' title='Share by Email' target='_blank'><li class='fa-envelope_r' ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/email1.png' alt='Share on email'  width='35' /></li></a><a href='https://www.linkedin.com/shareArticle?mini=true&url=https://pib.gov.in/PressReleasePage.aspx?PRID=1854598&title= Envoys of four nations present credentials to President of India&summary=My%20favorite%20developer%20program&source=LinkedIn' target='_blank'><li class='fa-linkedin_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/linkedin.png' alt='Share on linkedin' width='35' /></li></a></ul></div></div>
+            </div>
+        </div>
+        <input type="hidden" name="ltrTitlee" id="ltrTitlee" value=" Envoys of four nations present credentials to President of India" />
+        <input type="hidden" name="ltrSubtitlee" id="ltrSubtitlee" />
+        <input type="hidden" name="ltrDescriptionn" id="ltrDescriptionn" value="&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:white&quot;>&lt;span style=&quot;color:#000000&quot;>&lt;span style=&quot;color:black&quot;>The President of India, Smt Droupadi Murmu accepted credentials from the Ambassadors of Ecuador, Somalia, Germany and Suriname at a ceremony held at Rashtrapati Bhavan today (August 26, 2022). Those who presented their credentials were:&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:white&quot;>&lt;span style=&quot;color:#000000&quot;>&amp;nbsp;&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:white&quot;>&lt;span style=&quot;color:#000000&quot;>1.&amp;nbsp;&amp;nbsp;&amp;nbsp;H.E. Mr Francisco Teodoro Maldonado Guevara, Ambassador of the Republic of Ecuador&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:white&quot;>&lt;span style=&quot;color:#000000&quot;>2.&amp;nbsp;&amp;nbsp;&amp;nbsp;H.E. Mr Ahmed Ali Dahir, Ambassador of the Federal Republic of Somalia&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:white&quot;>&lt;span style=&quot;color:#000000&quot;>3.&amp;nbsp;&amp;nbsp;&amp;nbsp;H.E. Dr Philipp Ackermann, Ambassador of the Federal Republic of Germany&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:white&quot;>&lt;span style=&quot;color:#000000&quot;>4.&amp;nbsp;&amp;nbsp;&amp;nbsp;H.E. Mr Arunkoemar Hardien, Ambassador of the Republic of Suriname&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:white&quot;>&lt;span style=&quot;color:#000000&quot;>&amp;nbsp;&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;color:#000000&quot;>&lt;span style=&quot;background-color:#ffffff&quot;>*****&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:start&quot;>&lt;strong>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;color:#000000&quot;>&lt;span style=&quot;background-color:#ffffff&quot;>DS/BM&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/strong>&lt;/p>
+" />
+        <script type="text/javascript">
+            var mPlayer = document.getElementById("background_music");
+            var mPlayAction = document.getElementById("playbutton");
+
+            var isPlaying = false;
+
+            function playAudio() {
+                mPlayer.play();
+                isPlaying = true;
+                document.getElementById('stopA').style.display = "block";
+                document.getElementById('playA').style.display = "none";
+            }
+
+            function pauseAudio() {
+                mPlayer.pause();
+                isPlaying = false;
+                document.getElementById('playA').style.display = "block";
+                document.getElementById('stopA').style.display = "none";
+            }
+            //function HandleAudio() {
+            //    if (isPlaying == true) {
+            //        //Playing already Pause it
+            //        pauseAudio();
+            //    } else {
+            //        //Play the music
+            //        playAudio();
+            //    }
+            //}
+        </script>
+        <script type="text/javascript">
+            var synth = window.speechSynthesis;
+
+            function playA() {
+                var title = document.getElementById('ltrTitlee').value;
+                var Subtitle = document.getElementById('ltrSubtitlee').value;
+                var Description = document.getElementById('ltrDescriptionn').value;
+                var without_htm = stripHtml(Description);
+                var txt_full = title + Subtitle + without_htm;
+                var utterThis = new SpeechSynthesisUtterance(txt_full);
+                utterThis.lang = "en-US";
+                utterThis.pitch = 0;
+                utterThis.rate = 1;
+                window.speechSynthesis.speak(utterThis);
+                document.getElementById('stopAA').style.display = "block";
+                document.getElementById('playAA').style.display = "none";
+            }
+            function stopA() {
+                synth.cancel();
+                //synth.pause();
+                // synth.resume();
+                document.getElementById('playAA').style.display = "block";
+                document.getElementById('stopAA').style.display = "none";
+            }
+            function stripHtml(html) {
+                let tmp = document.createElement("DIV");
+                tmp.innerHTML = html;
+                return tmp.textContent || tmp.innerText || "";
+            }
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var width = $(window).width();
+                if (width < 768) {
+
+                    // Extra Small Device
+                    document.getElementById('frst_t').style.display = "block";
+                    document.getElementById('second_t').style.display = "none";
+
+                } else if (width < 991) {
+                    document.getElementById('frst_t').style.display = "block";
+                    document.getElementById('second_t').style.display = "none";
+                    // Small Device
+
+                } else if (width < 1199) {
+                    document.getElementById('frst_t').style.display = "none";
+                    document.getElementById('second_t').style.display = "block";
+                    // Medium Device
+
+                } else {
+                    document.getElementById('frst_t').style.display = "none";
+                    document.getElementById('second_t').style.display = "block";
+                    // Large Device
+
+                }
+            });
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var width = $(window).width();
+                if (width < 768) {
+
+                    // Extra Small Device
+                    document.getElementById('frst_t').style.display = "block";
+                    document.getElementById('second_t').style.display = "none";
+
+                } else if (width < 991) {
+                    document.getElementById('frst_t').style.display = "block";
+                    document.getElementById('second_t').style.display = "none";
+                    // Small Device
+
+                } else if (width < 1199) {
+                    document.getElementById('frst_t').style.display = "none";
+                    document.getElementById('second_t').style.display = "block";
+                    // Medium Device
+
+                } else {
+                    document.getElementById('frst_t').style.display = "none";
+                    document.getElementById('second_t').style.display = "block";
+                    // Large Device
+
+                }
+            });
+        </script>
+        
+        <style type="text/css">
+            .f_vl {
+                padding-right: 30px;
+                font-size: 17px;
+                cursor: pointer;
+            }
+
+            .log_oo {
+                width: 20%;
+                display: block;
+                position: inherit;
+            }
+
+                .log_oo img {
+                    width: 150px;
+                    /*width: 100%;
+                    height: auto;*/
+                }
+
+            .sticky-social_mb {
+                position: fixed;
+                bottom: 0px;
+                padding: 0px;
+                margin: 0px;
+                width: 100%;
+            }
+
+            .social_mb {
+                list-style: none;
+                display: flex;
+                width: 100%;
+                margin-bottom: -8px;
+            }
+
+                .social_mb a {
+                    padding: 8px 0px;
+                    font-size: 30px;
+                    transition: all 0.8s ease-in-out;
+                    width: 20% !important;
+                    text-align: center;
+                }
+        </style>
+        <style type="text/css">
+            .section1 {
+                position: relative;
+                padding: 10px 0px;
+                width: 100%;
+            }
+
+
+
+            .sticky-social {
+                position: fixed;
+                top: 20px;
+                left: 0px;
+                padding: 0px;
+                margin: 0px;
+            }
+
+            .social {
+                list-style: none;
+            }
+
+                .social a li {
+                    padding: 8px 12px;
+                    font-size: 25px;
+                    transition: all 0.8s ease-in-out;
+                }
+
+                    .social a li:hover {
+                        margin-right: -30px;
+                        box-shadow: 2px 5px 10px grey;
+                    }
+
+                        .social a li:hover .fa {
+                            margin-left: 20px;
+                        }
+
+            .fb_b {
+                /* background-color: rgb(59, 89, 152);*/
+                background-color: rgba(65,103,178,255);
+            }
+
+            .twitter_r {
+                /* background-color: rgb(29, 161, 242);*/
+                background-color: rgba(80,171,241,255);
+            }
+
+            .whatsapp_r {
+                /* background-color: rgb(77, 194, 71);*/
+                background-color: rgba(13,191,67,255);
+            }
+
+            .fa-envelope_r {
+                /* background-color: rgb(219, 68, 55);*/
+                background-color: #e2123d;
+            }
+
+            .fa-linkedin_r {
+                background-color: rgb(0, 119, 181);
+            }
+        </style>
+        <style type="text/css">
+            @media only screen and (max-device-width: 767px) {
+                p span img {
+                    width: 90% !important;
+                    height: auto !important;
+                }
+
+                p img {
+                    width: 90% !important;
+                    height: auto !important;
+                }
+
+                h2 {
+                    font-size: 18px !important;
+                    font-weight: 600 !important;
+                }
+            }
+        </style>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("sc_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","PopupControlID":"P_CategoryManagement","dynamicServicePath":"/PressReleaseIframePage.aspx","id":"mpe"}, null, null, $get("Hidden"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>
