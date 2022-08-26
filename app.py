@@ -8,6 +8,7 @@ from pydantic import BaseModel
 app = FastAPI()
 class feedsClass(BaseModel):
     link:str
+    title: str
     
 @app.post("/")
 def rssFeed(feeds:feedsClass):
