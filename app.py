@@ -5,10 +5,11 @@ import html
 from fastapi import FastAPI
 from pydantic import BaseModel
 
+
 app = FastAPI()
 class feedsClass(BaseModel):
     link:str
-    title: str
+    title:str
     
 @app.post("/")
 def rssFeed(feeds:feedsClass):
@@ -18,9 +19,16 @@ def rssFeed(feeds:feedsClass):
     file_html = open("index.html", "w")
     file_html.write(htmltext)
     file_html.close()
-
+    
     soup = BeautifulSoup( (open("index.html"))  , 'html.parser')
     text = soup.find_all('p')
+    dateTime = soup.find('div', class_='ReleaseDateSubHeaddateTime').get_text().strip().split('Posted On:')[1].strip().split('by')[0].strip().split(" ")
+    dateTime[1]= dateTime[1].lower()
+    # locale.setlocale(locale.LC_ALL, 'en_IN')
+    # date = datetime.datetime.strptime(date, '%a, %d %b %Y %H:%M:%S')
+    # date = date.strftime('%d-%m-%Y')
+    print(dateTime)
+    # datetime.datetime.strptime("11/12/98","%dd/%d/%y")
     title = soup.find(property="og:title")
     title = (title["content"])
 
@@ -35,9 +43,31 @@ def rssFeed(feeds:feedsClass):
                 data[str(k)] = j['src']
         k+=1
     print(data)
+    # monthDict={1:'jan', 2:'feb', 3:'mar', 4:'apr', 5:'may', 6:'jun', 7:'jul', 8:'aug', 9:'sep', 10:'oct', 11:'nov', 12:'dec'}
+    monthDict = {
+        'jan':'0',
+        'feb':'1',
+        'mar':'2',
+        'apr':'3',
+        'may':'4',
+        'jun':'5',
+        'jul':'6',
+        'aug':'7',
+        'sep':'8',
+        'oct':'9',
+        'nov':'10',
+        'dec':'11'
+    }
+    dateTime[1] = dateTime[1].replace(dateTime[1],monthDict[dateTime[1]])
+    dateString = dateTime[0]+'-'+dateTime[1]+'-'+dateTime[2] +" "+ dateTime[3] 
+    
     # dic = {"title":title , 'img' : data['2'], 'description':data['1']   }
     # jsonData = json.loads(json.dumps(data))
-    return {"jsonData":data}
+    # locale.setlocale(locale.LC_ALL, 'fr_FR')
+    # test_date = datetime.datetime.strptime(date, '%d %b %Y')
+    # iso_date = test_date.isoformat()
+    # print(iso_date)
+    return {"jsonData":data, "title":feeds.title, "createdAt":dateString}
 
 
 
